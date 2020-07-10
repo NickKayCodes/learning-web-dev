@@ -3,18 +3,18 @@ function randomNum1() {
     var random = Math.floor(Math.random() * 6) + 1;
     return random;
 }
+//generates random numbers for players
+var player1 = randomNum1();
+var player2 = randomNum1();
 
-//initialize variables for dice image and link them to actual .png files
-var diceImg1 = "images/dice" + randomNum1() + ".png";
-var diceImg2 = "images/dice" + randomNum1() + ".png";
+//initialize variables for dice image for player1 and player2 and generate image link according to dice roll.
+var diceImg1 = "images/dice" + player1 + ".png";
+var diceImg2 = "images/dice" + player2 + ".png";
 
 //select query based on classes and set their attribute based on random generated image number
 document.querySelector(".img1").setAttribute("src", + diceImg1);
 document.querySelector(".img2").setAttribute("src", + diceImg2);
 
-//generates random numbers for players
-var player1 = randomNum1();
-var player2 = randomNum1();
 
 //compares players dice rolls
 if (player1 > player2) {
