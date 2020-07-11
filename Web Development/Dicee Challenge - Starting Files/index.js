@@ -12,8 +12,8 @@ var diceImg1 = "images/dice" + player1 + ".png";
 var diceImg2 = "images/dice" + player2 + ".png";
 
 //select query based on classes and set their attribute based on random generated image number
-document.querySelectorAll("img")[0].setAttribute("src", + diceImg1);
-document.querySelectorAll("img")[1].setAttribute("src", + diceImg2);
+document.querySelectorAll("img")[0].setAttribute("src", diceImg1);
+document.querySelectorAll("img")[1].setAttribute("src", diceImg2);
 
 
 //compares players dice rolls
