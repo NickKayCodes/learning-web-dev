@@ -1,6 +1,9 @@
 function eventListener(event) {
 
-    document.addEventListener("keydown", function (event) { checkKeypress(event.key); })
+    document.addEventListener("keydown", function (event) {
+        checkKeypress(event.key);
+        buttonAnimation(event.key);
+    })
 
 
 }
@@ -33,11 +36,17 @@ function checkKeypress(key) {
     }
 }
 
-for (let i = 0; i < document.querySelectorAll(".drum").length; i++) {
+for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
     document.querySelectorAll(".drum")[i].addEventListener("click", function () {
         let buttonInnerHTML = this.innerHTML;
         checkKeypress(buttonInnerHTML);
+        buttonAnimation(checkKeypress);
     }
     );
 }
 
+function buttonAnimation(checkKeypress) {
+    for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
+        let activeButton = document.querySelector("." + checkKeypress);
+    }
+}
